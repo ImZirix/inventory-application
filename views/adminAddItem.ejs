@@ -1,0 +1,18 @@
+<div class="hero">
+  <form action="/admin/add-item" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <label for="description">Description</label>
+    <input type="text" name="description" required>
+    <label for="stock">Stock:</label>
+    <input type="number" name="stock" required>
+    <label for="price">Price:</label>
+    <input type="number" name="price" required>
+    <select name="category_id">
+      <% categories.forEach(cat => { %>
+        <option value="<%= cat.id %>"><%= cat.name %></option>
+        <% }) %>
+    </select>
+    <button type="submit">Add item</button>
+  </form>
+</div>

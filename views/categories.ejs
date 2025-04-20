@@ -1,0 +1,8 @@
+<div class="cat">
+  <% categories.forEach(cat => { %>
+    <div class="card">
+      <a href="/categories/<%= encodeURIComponent(cat.name) %>"><%= cat.name %></a>
+      <p><span><%= cat.description %></span></p>
+    </div>
+    <% }) %>
+</div>

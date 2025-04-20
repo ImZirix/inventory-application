@@ -1,0 +1,28 @@
+<div class="manage">
+  <h1>Manage Categories</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% cat.forEach(cate => { %>
+        <tr>
+          <td><%= cate.name %></td>
+          <td><%= cate.description %></td>
+          <td>$<%= cate.price %></td>
+          <td><%= cate.stock %></td>
+          <td>
+            <a href="/admin/edit-cate/<%= cate.id %>">Edit</a> |
+            <form action="/admin/delete-cate/<%= cate.id %>" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,29 @@
+<h1>Manage Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% items.forEach(item => { %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td>$<%= item.price %></td>
+        <td><%= item.stock %></td>
+        <td>
+          <a href="/admin/edit-item/<%= item.id %>">Edit</a> |
+          <form action="/admin/delete-item/<%= item.id %>" method="POST" style="display:inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

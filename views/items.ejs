@@ -1,0 +1,10 @@
+<div class="hero">
+  <% items.forEach(item => { %>
+    <div class="card">
+      <a href="/items/<%= encodeURIComponent(item.name) %>"><%= item.name %></a>
+      <p class="desc"><%= item.description %></p>
+      <p>Stock: <%= item.stock %></p>
+      <p>Price: <%= item.price %>$</p>
+    </div>
+    <% }) %>
+</div>
