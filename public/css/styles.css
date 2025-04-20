@@ -80,11 +80,10 @@ p span {
 }
 .index {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   max-width: 600px;
   gap: 1rem;
-  margin-top: 3rem;
+  min-height: 100vh;
 }
 
 .index h1 {
@@ -96,6 +95,7 @@ p span {
 
 .cat {
   margin-top: 3rem;
+  min-height: 100vh;
 }
 
 .login form {
@@ -116,4 +116,17 @@ p span {
 
 table tbody tr td {
   border-right: 1px solid rgba(255, 255, 255, 0.644);
+}
+input {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.navbar {
+  margin-bottom: 4rem;
+}
+footer {
+  margin-top: auto;
 }
